@@ -1,0 +1,33 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="/"><span style="font-family : 굴림;">Mini Project by G4</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="board">Review</a></li>
+          <li><a href="album">Photo Review</a></li>
+          <li class="drop-down">
+            {% if member_no == None %}<a href="">guest</a>
+            <ul>
+              <li><a href="member_register">회원가입</a></li>
+            </ul>
+            {% else %}<a href="">{{ member_name }}</a>
+            <ul>
+              <li><a href="member_logout">Logout</a></li>
+              <li><a href="member_edit">정보수정</a></li>
+            </ul>
+            {% endif %}
+          </li>
+          <li class="get-started"><a href="member_register">Register</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
